@@ -17,7 +17,7 @@ SHELL [ "/bin/zsh", "-c" ]
 
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
     -t robbyrussell \
-    && apt install -y sudo vim net-tools build-essential sudo autoconf automake cpp-doc gcc-doc make-doc autoconf-doc linux-doc glibc-doc git-doc screen
+    && apt install -y sudo vim net-tools build-essential cmake autoconf automake cpp-doc gcc-doc make-doc autoconf-doc linux-doc glibc-doc git-doc screen --fix-missing
 
 
 RUN echo "SHELL=/usr/bin/zsh" >> /etc/default/useradd\
